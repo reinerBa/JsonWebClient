@@ -50,5 +50,33 @@ namespace JsonWebClient
             var resultString = UploadObject(url, dic, method);
             return JsonConvert.DeserializeObject<T>(resultString);
         }
+
+        public static string UploadObject(object objectToSend, string url, string method = "POST", Dictionary<string, string> headers = null, IWebProxy proxy = null)
+        {
+            using(JsonWebClient client = new JsonWebClient())
+            {
+                if (proxy != null)
+                    client.Proxy = proxy;
+                if (headers != null)
+                    foreach (var h in headers)
+                        client.Headers.Add(h.Key, h.Value);
+                
+                return client.UploadObject(url, objectToSend, method);
+            }
+        }
+
+        public static T DownloadObject<T>(object objectToSend, string url, string method = "POST", Dictionary<string, string> headers = null, IWebProxy proxy = null)
+        {
+            using (JsonWebClient client = new JsonWebClient())
+            {
+                if (proxy != null)
+                    client.Proxy = proxy;
+                if (headers != null)
+                    foreach (var h in headers)
+                        client.Headers.Add(h.Key, h.Value);
+
+                return client.DownloadObject<T>(url, objectToSend, method);
+            }
+        }
     }
 }
