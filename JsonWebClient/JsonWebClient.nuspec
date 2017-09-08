@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>JsonWebClient</id>
+    <version>$version$</version>
+    <title>JsonWebClient</title>
+    <authors>Reiner Bamberger</authors>
+    <licenseUrl>https://github.com/reinerBa/JsonWebClient/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/reinerBa/JsonWebClient</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A simple tool to post object instances to ASP.Net MVC (or whatever) and retrieve strings or instances of objects </description>
+    <releaseNotes>Has the ability to upload and download objects and two static functions</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>JSON C# Webclient</tags>
+	<dependencies>
+        <dependency id="Newtonsoft.Json" version="6.0.4" />
+    </dependencies>
+  </metadata>
+    <files>
+	  <!-- Add a readme -->
+	  <file src="..\README.md" target="" />
+    </files>
+</package>
