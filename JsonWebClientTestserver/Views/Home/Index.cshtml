@@ -1,0 +1,15 @@
+﻿@model JsonWebClientTestserver.Models.IndexViewModel
+
+<div class="jumbotron">
+    <h1>JsonWebClient</h1>
+    <p class="lead">JsonWebClient is a simple tool to send object instances to ASP.Net MVC and retrieve strings or instances of objects.</p>
+    <p><a href="https://github.com/reinerBa/JsonWebClient" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <p>Result 1: @Model.Result1 </p>
+        <p>&emsp;it should be 1</p>
+        <p>Result 2: @Model.Result2</p>
+        <p>&emsp;should be type JsonWebClientTestserver.Models.CBA and have values a:1,b:2,c:3</p>
+    </div>
+</div>

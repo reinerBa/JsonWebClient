@@ -1,17 +1,18 @@
 ﻿using System.Collections.Generic;
-using System.Net;
 using System.Text;
+using System.Net;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace JsonWebClient
+namespace bamberger.rocks
 {
     public class JsonWebClient : WebClient
     {
-        public JsonWebClient() : base() {
-           base.Encoding = Encoding.UTF8;
-           base.Headers.Add("Content-Type", "application/json; charset=utf-8");
-           base.Headers.Add("Accept", "application/json");
+        public JsonWebClient() : base()
+        {
+            base.Encoding = Encoding.UTF8;
+            base.Headers.Add("Content-Type", "application/json; charset=utf-8");
+            base.Headers.Add("Accept", "application/json");
         }
         public bool responseNotEmpty = false;
 
@@ -29,7 +30,7 @@ namespace JsonWebClient
             JObject jObjects = new JObject();
 
             var jsonString = string.Empty;
-            foreach(var obj  in dic)
+            foreach (var obj in dic)
             {
                 jObjects.Add(obj.Key, JObject.FromObject(obj.Value));
             }
@@ -53,14 +54,14 @@ namespace JsonWebClient
 
         public static string UploadObject(object objectToSend, string url, string method = "POST", Dictionary<string, string> headers = null, IWebProxy proxy = null)
         {
-            using(JsonWebClient client = new JsonWebClient())
+            using (JsonWebClient client = new JsonWebClient())
             {
                 if (proxy != null)
                     client.Proxy = proxy;
                 if (headers != null)
                     foreach (var h in headers)
                         client.Headers.Add(h.Key, h.Value);
-                
+
                 return client.UploadObject(url, objectToSend, method);
             }
         }

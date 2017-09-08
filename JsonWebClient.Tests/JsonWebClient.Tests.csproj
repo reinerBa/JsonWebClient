@@ -102,9 +102,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JsonWebClient\JsonWebClient.csproj">
-      <Project>{77EB448B-0DDE-4BF0-8BFB-36C930677C14}</Project>
-      <Name>JsonWebClient</Name>
+    <ProjectReference Include="..\JsonWebClientTestserver\JsonWebClientTestserver.csproj">
+      <Project>{02b71829-cea1-4a28-8534-104c380b8263}</Project>
+      <Name>JsonWebClientTestserver</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

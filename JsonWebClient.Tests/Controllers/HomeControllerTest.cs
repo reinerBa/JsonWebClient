@@ -1,9 +1,9 @@
 ﻿using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using JsonWebClient;
-using JsonWebClient.Controllers;
+using JsonWebClientTestserver;
+using JsonWebClientTestserver.Controllers;
 
-namespace JsonWebClient.Tests.Controllers
+namespace JsonWebClientTestserver.Tests.Controllers
 {
     [TestClass]
     public class HomeControllerTest
