@@ -2,6 +2,7 @@
 using JsonWebClientTestserver.Models;
 using bamberger.rocks;
 
+// link for proper test framework https://www.strathweb.com/2015/05/integration-testing-asp-net-5-asp-net-mvc-6-applications/
 namespace JsonWebClientTestserver.Controllers
 {
     public class HomeController : Controller
