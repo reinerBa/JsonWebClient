@@ -5,16 +5,23 @@
     <version>$version$</version>
     <title>JsonWebClient</title>
     <authors>Reiner Bamberger</authors>
+    <owners>Reiner Bamberger</owners>
     <licenseUrl>https://github.com/reinerBa/JsonWebClient/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/reinerBa/JsonWebClient</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>A simple tool to post object instances to ASP.Net MVC (or whatever) and retrieve strings or instances of objects </description>
-    <releaseNotes>Has the ability to upload and download objects and two static functions</releaseNotes>
+    <description>A simple tool to post object instances to ASP.Net MVC (or whatever) and retrieve strings or instances of objects. The class extends System.Net.WebClient. </description>
+    <releaseNotes>Added Framework information.</releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>JSON C# Webclient</tags>
-	<dependencies>
-        <dependency id="Newtonsoft.Json" version="6.0.4" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.0" />
+      <group targetFramework=".NETStandard1.4">
+        <dependency id="Newtonsoft.Json" version="[9.0.1, )" />
+      </group>
     </dependencies>
+	    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Net" />
+    </frameworkAssemblies>
   </metadata>
     <files>
 	  <!-- Add a readme -->
