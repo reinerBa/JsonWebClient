@@ -11,5 +11,13 @@
         <p>&emsp;it should be 1</p>
         <p>Result 2: @Model.Result2</p>
         <p>&emsp;should be type JsonWebClientTestserver.Models.CBA and have values a:1,b:2,c:3</p>
+
+        <h3>Test results:</h3>
+        <table>
+            @foreach (var x in Model.results)
+            {
+                <tr><td>@x.Key</td><td>@x.Value</td></tr>
+            }
+        </table>
     </div>
 </div>
